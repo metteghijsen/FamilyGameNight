@@ -15,7 +15,7 @@ struct ViewA: View {
             Image(systemName: "house.fill")
                 .foregroundColor(Color.white)
                 .font(.system(size: 100))
-        }
+        }        
     }
 }
 
