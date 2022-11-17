@@ -9,12 +9,17 @@ import SwiftUI
 
 struct ViewC: View {
     var body: some View {
-        ZStack {
-            Color.green
-            
-            Image(systemName: "books.vertical.fill")
-                .foregroundColor(Color.white)
-                .font(.system(size: 100))
+        NavigationView{
+            ScrollView{
+                ZStack {
+                    Color.green
+                
+                    Image(systemName: "books.vertical.fill")
+                    .foregroundColor(Color.white)
+                    .font(.system(size: 100))
+                }
+            }
+            .navigationTitle("Library")
         }
     }
 }

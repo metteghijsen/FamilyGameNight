@@ -9,13 +9,18 @@ import SwiftUI
 
 struct ViewA: View {
     var body: some View {
-        ZStack {
-            Color.blue
-            
-            Image(systemName: "house.fill")
-                .foregroundColor(Color.white)
-                .font(.system(size: 100))
-        }        
+        NavigationView{
+            ScrollView{
+                ZStack {
+                    Color.blue
+                
+                    Image(systemName: "house.fill")
+                    .foregroundColor(Color.white)
+                    .font(.system(size: 100))
+                }
+            }
+            .navigationTitle("Home")
+        }
     }
 }
 
