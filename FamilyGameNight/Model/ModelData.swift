@@ -7,7 +7,7 @@
 
 import Foundation
 
-var boardgames: [LibraryItem] = load("boardgameData.json")
+var libraryItemArray: [LibraryItem] = load("boardgameData.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
@@ -30,3 +30,5 @@ func load<T: Decodable>(_ filename: String) -> T {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
 }
+
+

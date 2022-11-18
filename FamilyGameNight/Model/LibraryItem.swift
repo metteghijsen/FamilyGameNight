@@ -11,13 +11,14 @@ struct LibraryItem: Hashable, Codable {
     var id: Int
     var name: String
    
-    var price: Double
-    var yearPublished: Int
-    var minPlayers: Int
-    var maxPlayers: Int
-    var minPlaytime: Int
-    var maxPlaytime: Int
-    var minAge: Int
-    
-    var description: String
+//    var price: Double
+//    var yearPublished: Int
+//    var minPlayers: Int
+//    var maxPlayers: Int
+//    var minPlaytime: Int
+//    var maxPlaytime: Int
+//    var minAge: Int
+//
+//    var description: String
 }
+

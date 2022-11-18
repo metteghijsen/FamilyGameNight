@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		594D93122927A6E30016D07D /* LibraryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D93112927A6E30016D07D /* LibraryItem.swift */; };
-		594D93142927A8810016D07D /* boardgameData.json in Resources */ = {isa = PBXBuildFile; fileRef = 594D93132927A8810016D07D /* boardgameData.json */; };
 		594D93162927A8B60016D07D /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D93152927A8B60016D07D /* ModelData.swift */; };
+		594D931C2927ABDF0016D07D /* LibraryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D931B2927ABDF0016D07D /* LibraryItem.swift */; };
+		594D931E2927AC190016D07D /* LibraryItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D931D2927AC190016D07D /* LibraryItemRow.swift */; };
+		594D93202927B9370016D07D /* boardgameData.json in Resources */ = {isa = PBXBuildFile; fileRef = 594D931F2927B9370016D07D /* boardgameData.json */; };
 		59D3A361292638D20091E465 /* FamilyGameNightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D3A360292638D20091E465 /* FamilyGameNightApp.swift */; };
 		59D3A363292638D20091E465 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D3A362292638D20091E465 /* ContentView.swift */; };
 		59D3A365292638D30091E465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59D3A364292638D30091E465 /* Assets.xcassets */; };
@@ -20,9 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		594D93112927A6E30016D07D /* LibraryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryItem.swift; sourceTree = "<group>"; };
-		594D93132927A8810016D07D /* boardgameData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = boardgameData.json; sourceTree = "<group>"; };
 		594D93152927A8B60016D07D /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		594D931B2927ABDF0016D07D /* LibraryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryItem.swift; sourceTree = "<group>"; };
+		594D931D2927AC190016D07D /* LibraryItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryItemRow.swift; sourceTree = "<group>"; };
+		594D931F2927B9370016D07D /* boardgameData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = boardgameData.json; sourceTree = "<group>"; };
 		59D3A35D292638D20091E465 /* FamilyGameNight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyGameNight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59D3A360292638D20091E465 /* FamilyGameNightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyGameNightApp.swift; sourceTree = "<group>"; };
 		59D3A362292638D20091E465 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,7 +49,7 @@
 		594D93172927A9190016D07D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				594D93132927A8810016D07D /* boardgameData.json */,
+				594D931F2927B9370016D07D /* boardgameData.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -55,7 +57,7 @@
 		594D93182927A92F0016D07D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				594D93112927A6E30016D07D /* LibraryItem.swift */,
+				594D931B2927ABDF0016D07D /* LibraryItem.swift */,
 				594D93152927A8B60016D07D /* ModelData.swift */,
 			);
 			path = Model;
@@ -80,12 +82,12 @@
 		59D3A35F292638D20091E465 /* FamilyGameNight */ = {
 			isa = PBXGroup;
 			children = (
+				59D3A36E292639700091E465 /* Views */,
+				594D93172927A9190016D07D /* Resources */,
+				594D93182927A92F0016D07D /* Model */,
 				59D3A360292638D20091E465 /* FamilyGameNightApp.swift */,
 				59D3A362292638D20091E465 /* ContentView.swift */,
-				594D93182927A92F0016D07D /* Model */,
-				59D3A36E292639700091E465 /* Views */,
 				59D3A364292638D30091E465 /* Assets.xcassets */,
-				594D93172927A9190016D07D /* Resources */,
 				59D3A366292638D30091E465 /* Preview Content */,
 			);
 			path = FamilyGameNight;
@@ -105,6 +107,7 @@
 				59D3A36F292639850091E465 /* Home.swift */,
 				59D3A371292639960091E465 /* MyFamily.swift */,
 				59D3A373292639A20091E465 /* Library.swift */,
+				594D931D2927AC190016D07D /* LibraryItemRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,7 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				594D93142927A8810016D07D /* boardgameData.json in Resources */,
+				594D93202927B9370016D07D /* boardgameData.json in Resources */,
 				59D3A368292638D30091E465 /* Preview Assets.xcassets in Resources */,
 				59D3A365292638D30091E465 /* Assets.xcassets in Resources */,
 			);
@@ -180,9 +183,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				594D93122927A6E30016D07D /* LibraryItem.swift in Sources */,
+				594D931C2927ABDF0016D07D /* LibraryItem.swift in Sources */,
 				59D3A363292638D20091E465 /* ContentView.swift in Sources */,
 				59D3A370292639850091E465 /* Home.swift in Sources */,
+				594D931E2927AC190016D07D /* LibraryItemRow.swift in Sources */,
 				59D3A374292639A20091E465 /* Library.swift in Sources */,
 				59D3A361292638D20091E465 /* FamilyGameNightApp.swift in Sources */,
 				59D3A372292639960091E465 /* MyFamily.swift in Sources */,
