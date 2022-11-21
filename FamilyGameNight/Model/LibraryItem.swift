@@ -12,8 +12,8 @@ struct LibraryItem: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
    
-    var price: Double
-    var yearPublished: Int
+    var price: String
+    var yearPublished: String
     var requiredItems: String
     var minPlayers: Int
     var maxPlayers: Int
@@ -24,8 +24,13 @@ struct LibraryItem: Hashable, Codable, Identifiable {
     var description: String
     
     private var imageName: String
-    var image: Image {
+    var thumbnailImage: Image {
          Image(imageName)
+    }
+    
+    private var bannerName: String
+    var bannerImage: Image {
+         Image(bannerName)
     }
 }
 
