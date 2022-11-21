@@ -11,7 +11,14 @@ struct LibraryItemRow: View {
     var libraryItem: LibraryItem
     
     var body: some View {
-        Text(libraryItem.name)
+        HStack {
+                   libraryItem.image
+                       .resizable()
+                       .frame(width: 50, height: 50)
+                   Text(libraryItem.name)
+
+                   Spacer()
+               }
     }
 }
 

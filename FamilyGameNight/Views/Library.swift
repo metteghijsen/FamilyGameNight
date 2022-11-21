@@ -10,16 +10,8 @@ import SwiftUI
 struct ViewC: View {
     var body: some View {
         NavigationView{
-            ScrollView{
-                ZStack {
-                    Color.green
-                
-                    Image(systemName: "books.vertical.fill")
-                    .foregroundColor(Color.white)
-                    .font(.system(size: 100))
-                }
-            }
-            .navigationTitle("Library")
+            LibraryItemList()
+            .navigationTitle("Family Library")
         }
     }
 }

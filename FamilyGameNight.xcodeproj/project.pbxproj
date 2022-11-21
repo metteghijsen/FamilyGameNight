@@ -18,6 +18,7 @@
 		59D3A370292639850091E465 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D3A36F292639850091E465 /* Home.swift */; };
 		59D3A372292639960091E465 /* MyFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D3A371292639960091E465 /* MyFamily.swift */; };
 		59D3A374292639A20091E465 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D3A373292639A20091E465 /* Library.swift */; };
+		59D4F73F292B86E8007CAC7F /* LibraryItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D4F73E292B86E8007CAC7F /* LibraryItemList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		59D3A36F292639850091E465 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		59D3A371292639960091E465 /* MyFamily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFamily.swift; sourceTree = "<group>"; };
 		59D3A373292639A20091E465 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		59D4F73E292B86E8007CAC7F /* LibraryItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryItemList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				59D3A371292639960091E465 /* MyFamily.swift */,
 				59D3A373292639A20091E465 /* Library.swift */,
 				594D931D2927AC190016D07D /* LibraryItemRow.swift */,
+				59D4F73E292B86E8007CAC7F /* LibraryItemList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				59D3A363292638D20091E465 /* ContentView.swift in Sources */,
 				59D3A370292639850091E465 /* Home.swift in Sources */,
 				594D931E2927AC190016D07D /* LibraryItemRow.swift in Sources */,
+				59D4F73F292B86E8007CAC7F /* LibraryItemList.swift in Sources */,
 				59D3A374292639A20091E465 /* Library.swift in Sources */,
 				59D3A361292638D20091E465 /* FamilyGameNightApp.swift in Sources */,
 				59D3A372292639960091E465 /* MyFamily.swift in Sources */,
