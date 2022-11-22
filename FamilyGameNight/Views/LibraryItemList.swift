@@ -10,9 +10,12 @@ import SwiftUI
 struct LibraryItemList: View {
     var body: some View {
         List(libraryItemArray) { libraryItem in
+            NavigationLink {
+                LibraryItemDetails(libraryItem: libraryItem)
+            } label: {
                 LibraryItemRow(libraryItem: libraryItem)
             }
-
+        }
     }
 }
 

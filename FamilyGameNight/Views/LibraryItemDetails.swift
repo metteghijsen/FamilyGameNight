@@ -11,62 +11,70 @@ struct LibraryItemDetails: View {
     var libraryItem: LibraryItem
     
     var body: some View {
-        VStack {
-            BannerView(image: libraryItem.bannerImage)
-                .ignoresSafeArea(edges: .top)
-                .frame(height: 100)
-           CircleImage(image: libraryItem.thumbnailImage)
-
-               VStack(alignment: .leading) {
-                   HStack {
-                       Text(libraryItem.name)
-                           .font(.title)
-                       .bold()
-                       
-                       Spacer()
-                       
-                       Text(libraryItem.price)
-                           .font(.title)
-                           .bold()
-                           .foregroundColor(.secondary)
-                   }
-                   
-                   Text("Published in \(libraryItem.yearPublished)")
-                   .font(.subheadline)
-                   .foregroundColor(.secondary)
-                   
-                   
-                   Divider()
-
-                   Text("Game description")
-                       .font(.title2)
-                       .bold()
-                      
-                   Text(libraryItem.description)
-                   
-                   Spacer()
-                   
-                   HStack{
-                       Image(systemName: "clock.fill")
-                       Text("\(libraryItem.minPlayTime) - \(libraryItem.maxPlayTime)")
-                   }
-                   HStack{
-                       Image(systemName: "person.2.fill")
-                       Text("\(libraryItem.minPlayers) - \(libraryItem.maxPlayers) players")
-                   }
-                   
-                   HStack{
-                       Image(systemName: "figure.and.child.holdinghands")
-                       Text("\(libraryItem.minAge)")
-                   }
-                   
-                   Spacer()
-                 
-               }
-               .padding()
-
-               Spacer()
-           }
+            ScrollView {
+                ZStack {
+                    BannerView(image: libraryItem.bannerImage)
+                        .scaledToFit()
+                        .ignoresSafeArea(edges: .top)
+                        .frame(height: 300)
+                    .shadow(radius: 7)
+                    
+                    CircleImage(image: libraryItem.thumbnailImage)
+                        .shadow(radius: 7)
+                }
+               
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text(libraryItem.name)
+                            .font(.title)
+                            .bold()
+                        
+                        Spacer()
+                        
+                        Text(libraryItem.price)
+                            .font(.title)
+                            .bold()
+                            .foregroundColor(.secondary)
+                    }
+                    
+                    Text("Published in \(libraryItem.yearPublished)")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                    
+                    
+                    Divider()
+                    
+                    Text("Game description")
+                        .font(.title2)
+                        .bold()
+                    
+                    Text(libraryItem.description)
+                    
+                    Spacer()
+                    
+                    HStack{
+                        Image(systemName: "clock.fill")
+                        Text("\(libraryItem.minPlayTime) - \(libraryItem.maxPlayTime)")
+                    }
+                    HStack{
+                        Image(systemName: "person.2.fill")
+                        Text("\(libraryItem.minPlayers) - \(libraryItem.maxPlayers) players")
+                    }
+                    
+                    HStack{
+                        Image(systemName: "figure.and.child.holdinghands")
+                        Text("\(libraryItem.minAge)")
+                    }
+                    
+                    Spacer()
+                    
+                }
+                .padding()
+                
+                Spacer()
+            }
+            .navigationTitle(libraryItem.name)
+            .navigationBarTitleDisplayMode(.inline)
     }
 }
 

@@ -9,10 +9,10 @@ import SwiftUI
 
 struct BannerView: View {
     var image: Image
-    
+
     var body: some View {
         image
-            .shadow(radius: 7)
+            .resizable()
     }
 }
 
