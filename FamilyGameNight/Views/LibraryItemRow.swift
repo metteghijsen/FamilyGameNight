@@ -14,10 +14,24 @@ struct LibraryItemRow: View {
         HStack {
                    libraryItem.thumbnailImage
                        .resizable()
-                       .frame(width: 50, height: 50)
-                   Text(libraryItem.name)
+                       .frame(width: 75, height: 75)
+                       .cornerRadius(15)
+            VStack {
+                Text(libraryItem.name)
+                .bold()
+                .font(.title2)
+        
+            }
 
-                   Spacer()
+                Spacer()
+            Spacer()
+            Spacer()
+                Text(libraryItem.price)
+                .font(.subheadline)
+                .bold()
+                .foregroundColor(.secondary)
+            
+            Spacer()
                }
     }
 }

@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ViewC: View {
     var body: some View {
-        NavigationView{
-            LibraryItemList()
-            .navigationTitle("Family Library")
-        }
+            NavigationView{
+                LibraryItemList()
+                .navigationTitle("Family Library")
+                
+            }
     }
 }
 
