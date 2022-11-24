@@ -22,6 +22,7 @@ struct LibraryItem: Hashable, Codable, Identifiable {
     var minAge: String
       
     var description: String
+    var category: String
     
     private var imageName: String
     var thumbnailImage: Image {
