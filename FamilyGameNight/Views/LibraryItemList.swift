@@ -20,22 +20,6 @@ struct LibraryItemList: View {
         let cardgameArray = libraryItemArray.filter {
             LibraryItem in return LibraryItem.category == "cardgame"
         }
-
-//        List(boardgameArray) { libraryItem in
-//            NavigationLink {
-//                LibraryItemDetails(libraryItem: libraryItem)
-//            } label: {
-//                LibraryItemRow(libraryItem: libraryItem)
-//            }
-//        }
-//
-//        List(switchgameArray) { libraryItem in
-//            NavigationLink {
-//                LibraryItemDetails(libraryItem: libraryItem)
-//            } label: {
-//                LibraryItemRow(libraryItem: libraryItem)
-//            }
-//        }
         
         List {
             Section(header: Text("Board games"))
@@ -73,7 +57,7 @@ struct LibraryItemList: View {
                     }
                 }
             }
-        }.listStyle(.grouped)
+        }.listStyle(.sidebar)
     }
 }
 

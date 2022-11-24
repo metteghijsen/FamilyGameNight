@@ -20,7 +20,6 @@ struct LibraryItemRow: View {
                 Text(libraryItem.name)
                 .bold()
                 .font(.title2)
-        
             }
 
                 Spacer()

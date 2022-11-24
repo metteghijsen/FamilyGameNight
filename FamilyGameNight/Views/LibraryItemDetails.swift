@@ -50,6 +50,7 @@ struct LibraryItemDetails: View {
                     
                     Text(libraryItem.description)
                     
+                    Divider()
                     Spacer()
                     
                     HStack{
@@ -65,8 +66,6 @@ struct LibraryItemDetails: View {
                         Image(systemName: "figure.and.child.holdinghands")
                         Text("\(libraryItem.minAge)")
                     }
-                    
-                    Spacer()
                     
                 }
                 .padding()
