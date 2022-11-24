@@ -24,14 +24,13 @@ struct LibraryItemRow: View {
             }
 
                 Spacer()
-            Spacer()
-            Spacer()
+            
                 Text(libraryItem.price)
                 .font(.subheadline)
                 .bold()
                 .foregroundColor(.secondary)
             
-            Spacer()
+          
                }
     }
 }
