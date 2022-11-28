@@ -1,0 +1,27 @@
+[
+    {
+        "id": 0,
+        "name": "Sam",
+        "hasWon": false,
+        "isSelected" : false
+    },
+    {
+        "id": 1,
+        "name": "Mette",
+        "hasWon": false,
+        "isSelected" : false
+    },
+    {
+        "id": 2,
+        "name": "Henk",
+        "hasWon": false,
+        "isSelected" : false
+    },
+    {
+        "id": 3,
+        "name": "Frenk",
+        "hasWon": false,
+        "isSelected" : false
+    }
+]
+

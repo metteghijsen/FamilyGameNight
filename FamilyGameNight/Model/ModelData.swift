@@ -10,6 +10,8 @@ import Foundation
 var libraryItemArray: [LibraryItem] = load("boardgameData.json")
 var players: [Player] = load("Profiles.json")
 var previewNames: [String] = ["", "", "", ""]
+var selectedNames: [String] = []
+var familyMembers: [String] = reloadFamilyMembers()
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
@@ -33,33 +35,25 @@ func load<T: Decodable>(_ filename: String) -> T {
     }
 }
 
-func getNames() -> [String] {
-    //Create new array with strings MAKE SURE TO STATE THE VARIABLE TYPE AND INITIALISE IT AS WELL
-    //let names : [String] = ["", "", "", ""]
-    
-    //Fill array before returning it
-    /*
+func reloadFamilyMembers() -> [String] {
+    var names : [String] = []
     for player in players {
         names.append(player.name)
     }
-     */
-    //Rewrite the array of names on the wheel
-
-    var names : [String] = []
-    for player in players {
-        if(player.isSelected) {
-            names.append(player.name)
-        }
-    }
-    while(names.count < 4) {
-        names.append("")
-    }
-    
     return names
 }
 
 func clearPreviewNames() {
+    //Set all objects to not selected
+    for player in players {
+        if(player.isSelected) {
+            players[player.id].isSelected = false
+        }
+    }
+    
+    //Clear the arrays
     let max = previewNames.count
+    selectedNames = []
     previewNames = []
     while(previewNames.count < max) {
         previewNames.append("")
@@ -67,12 +61,14 @@ func clearPreviewNames() {
 }
 
 func reloadPreviewNames() {
+    //Reload the preview names and the selected names
     let max = previewNames.count
-    //Rewrite the array of names on the wheel
+    selectedNames = []
     previewNames = []
     for player in players {
         if(player.isSelected) {
             previewNames.append(player.name)
+            selectedNames.append(player.name)
         }
     }
     while(previewNames.count < max) {

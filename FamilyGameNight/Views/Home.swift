@@ -38,6 +38,14 @@ struct ViewA: View {
                 getWheelItemIndex: getWheelItemIndex
             )
             VStack {
+                NavigationLink("Play") {
+                    WheelView(names: selectedNames)
+                }
+                    .disabled(secondPlayer == "Select a player" || secondPlayer == "" ? true : false)
+                Button("Clear players") {
+                    clearPlayers()
+                }
+                
                 FortuneWheel(model: model)
                     .disabled(true)
                     .padding(50)
@@ -88,12 +96,7 @@ struct ViewA: View {
                 .padding(1)
                 Spacer()
                 
-                NavigationView {
-                    NavigationLink("Play") {
-                        //WheelPreview()
-                    }
-                    //.disabled(secondPlayer != "Select a player" ? true : false)
-                }
+                
             }
         }
     }
@@ -136,6 +139,14 @@ struct ViewA: View {
         //Refresh the previesNames array
         //reloadWheel()
         reloadPreviewNames()
+    }
+                       
+    private func clearPlayers() {
+        firstPlayer = "Select a player"
+        secondPlayer = ""
+        thirdPlayer = ""
+        fourthPlayer = ""
+        clearPreviewNames()
     }
 }
 

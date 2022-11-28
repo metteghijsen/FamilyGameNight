@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22832EE82934AD4C00CA462A /* FortuneWheel in Frameworks */ = {isa = PBXBuildFile; productRef = 22832EE72934AD4C00CA462A /* FortuneWheel */; };
 		22832EEA2934AEB300CA462A /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22832EE92934AEB300CA462A /* Player.swift */; };
+		22832EED2934B9EA00CA462A /* FortuneWheel in Frameworks */ = {isa = PBXBuildFile; productRef = 22832EEC2934B9EA00CA462A /* FortuneWheel */; };
+		22832EEF2934C11E00CA462A /* Profiles.json in Resources */ = {isa = PBXBuildFile; fileRef = 22832EEE2934C11E00CA462A /* Profiles.json */; };
+		22832EF12934C2D000CA462A /* WheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22832EF02934C2D000CA462A /* WheelView.swift */; };
+		22832EF32934CDC600CA462A /* WheelAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22832EF22934CDC600CA462A /* WheelAlert.swift */; };
 		594D93162927A8B60016D07D /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D93152927A8B60016D07D /* ModelData.swift */; };
 		594D931C2927ABDF0016D07D /* LibraryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D931B2927ABDF0016D07D /* LibraryItem.swift */; };
 		594D931E2927AC190016D07D /* LibraryItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D931D2927AC190016D07D /* LibraryItemRow.swift */; };
@@ -28,6 +31,9 @@
 
 /* Begin PBXFileReference section */
 		22832EE92934AEB300CA462A /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		22832EEE2934C11E00CA462A /* Profiles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Profiles.json; sourceTree = "<group>"; };
+		22832EF02934C2D000CA462A /* WheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
+		22832EF22934CDC600CA462A /* WheelAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelAlert.swift; sourceTree = "<group>"; tabWidth = 4; };
 		594D93152927A8B60016D07D /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		594D931B2927ABDF0016D07D /* LibraryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryItem.swift; sourceTree = "<group>"; };
 		594D931D2927AC190016D07D /* LibraryItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryItemRow.swift; sourceTree = "<group>"; };
@@ -51,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22832EE82934AD4C00CA462A /* FortuneWheel in Frameworks */,
+				22832EED2934B9EA00CA462A /* FortuneWheel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +67,7 @@
 		594D93172927A9190016D07D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				22832EEE2934C11E00CA462A /* Profiles.json */,
 				594D931F2927B9370016D07D /* boardgameData.json */,
 			);
 			path = Resources;
@@ -125,6 +132,8 @@
 				596902BC292BD20000066351 /* CircleImage.swift */,
 				596902BE292BD2C500066351 /* LibraryItemDetails.swift */,
 				59CA720D292C1B7E00F96704 /* BannerView.swift */,
+				22832EF02934C2D000CA462A /* WheelView.swift */,
+				22832EF22934CDC600CA462A /* WheelAlert.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -146,7 +155,7 @@
 			);
 			name = FamilyGameNight;
 			packageProductDependencies = (
-				22832EE72934AD4C00CA462A /* FortuneWheel */,
+				22832EEC2934B9EA00CA462A /* FortuneWheel */,
 			);
 			productName = FamilyGameNight;
 			productReference = 59D3A35D292638D20091E465 /* FamilyGameNight.app */;
@@ -177,7 +186,7 @@
 			);
 			mainGroup = 59D3A354292638D20091E465;
 			packageReferences = (
-				22832EE62934AD4C00CA462A /* XCRemoteSwiftPackageReference "FortuneWheel" */,
+				22832EEB2934B9EA00CA462A /* XCRemoteSwiftPackageReference "FortuneWheel" */,
 			);
 			productRefGroup = 59D3A35E292638D20091E465 /* Products */;
 			projectDirPath = "";
@@ -194,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				594D93202927B9370016D07D /* boardgameData.json in Resources */,
+				22832EEF2934C11E00CA462A /* Profiles.json in Resources */,
 				59D3A368292638D30091E465 /* Preview Assets.xcassets in Resources */,
 				59D3A365292638D30091E465 /* Assets.xcassets in Resources */,
 			);
@@ -206,7 +216,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22832EF12934C2D000CA462A /* WheelView.swift in Sources */,
 				596902BF292BD2C500066351 /* LibraryItemDetails.swift in Sources */,
+				22832EF32934CDC600CA462A /* WheelAlert.swift in Sources */,
 				594D931C2927ABDF0016D07D /* LibraryItem.swift in Sources */,
 				59D3A363292638D20091E465 /* ContentView.swift in Sources */,
 				59D3A370292639850091E465 /* Home.swift in Sources */,
@@ -423,20 +435,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		22832EE62934AD4C00CA462A /* XCRemoteSwiftPackageReference "FortuneWheel" */ = {
+		22832EEB2934B9EA00CA462A /* XCRemoteSwiftPackageReference "FortuneWheel" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sameersyd/FortuneWheel.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.5;
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		22832EE72934AD4C00CA462A /* FortuneWheel */ = {
+		22832EEC2934B9EA00CA462A /* FortuneWheel */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 22832EE62934AD4C00CA462A /* XCRemoteSwiftPackageReference "FortuneWheel" */;
+			package = 22832EEB2934B9EA00CA462A /* XCRemoteSwiftPackageReference "FortuneWheel" */;
 			productName = FortuneWheel;
 		};
 /* End XCSwiftPackageProductDependency section */
