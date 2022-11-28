@@ -9,7 +9,7 @@ import Foundation
 
 var libraryItemArray: [LibraryItem] = load("boardgameData.json")
 var players: [Player] = load("Profiles.json")
-var previewNames: [String] = ["", "", "", ""]
+var previewNames: [String] = ["", "", "", "", "", "", "", "", ""]
 var selectedNames: [String] = []
 var familyMembers: [String] = reloadFamilyMembers()
 
@@ -43,12 +43,11 @@ func reloadFamilyMembers() -> [String] {
     return names
 }
 
-func clearPreviewNames() {
+func clearWheelNames() {
     //Set all objects to not selected
     for player in players {
-        if(player.isSelected) {
-            players[player.id].isSelected = false
-        }
+        players[player.id].isSelected = false
+        players[player.id].bonus = false
     }
     
     //Clear the arrays
@@ -60,7 +59,7 @@ func clearPreviewNames() {
     }
 }
 
-func reloadPreviewNames() {
+func reloadWheelNames() {
     //Reload the preview names and the selected names
     let max = previewNames.count
     selectedNames = []
@@ -69,6 +68,10 @@ func reloadPreviewNames() {
         if(player.isSelected) {
             previewNames.append(player.name)
             selectedNames.append(player.name)
+            if(player.bonus) {
+                previewNames.append(player.name)
+                selectedNames.append(player.name)
+            }
         }
     }
     while(previewNames.count < max) {

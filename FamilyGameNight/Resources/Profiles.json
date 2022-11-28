@@ -2,25 +2,25 @@
     {
         "id": 0,
         "name": "Sam",
-        "hasWon": false,
+        "bonus": false,
         "isSelected" : false
     },
     {
         "id": 1,
         "name": "Mette",
-        "hasWon": false,
+        "bonus": false,
         "isSelected" : false
     },
     {
         "id": 2,
         "name": "Henk",
-        "hasWon": false,
+        "bonus": false,
         "isSelected" : false
     },
     {
         "id": 3,
         "name": "Frenk",
-        "hasWon": false,
+        "bonus": false,
         "isSelected" : false
     }
 ]

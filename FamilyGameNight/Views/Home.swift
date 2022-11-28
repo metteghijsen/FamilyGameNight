@@ -10,10 +10,8 @@ import FortuneWheel
 
 struct ViewA: View {
     
-    @State var firstPlayer = "Select a player"
-    @State var secondPlayer = ""
-    @State var thirdPlayer = ""
-    @State var fourthPlayer = ""
+    @State var playerMenus = ["Select player one", "", "", "", "", "", ""]
+    @State var bonus = [false, false, false, false, false, false, false]
     
     var body: some View {
         /*
@@ -38,65 +36,155 @@ struct ViewA: View {
                 getWheelItemIndex: getWheelItemIndex
             )
             VStack {
-                NavigationLink("Play") {
-                    WheelView(names: selectedNames)
-                }
-                    .disabled(secondPlayer == "Select a player" || secondPlayer == "" ? true : false)
-                Button("Clear players") {
-                    clearPlayers()
-                }
+                Text("Wheel settings")
+                    .font(.title)
+                    .fontWeight(.bold)
                 
                 FortuneWheel(model: model)
                     .disabled(true)
                     .padding(50)
                 
-                //WheelPreview()
-                
-                Spacer()
+                //Spacer()
                 
                 Group {
-                    Menu(firstPlayer) {
-                        ForEach(players, id: \.id) { player in
-                            if(player.isSelected != true) {
-                                //Don't ask me why swift expects parameters to be written like this within view elemements... Just don't.
-                                //I also tried using in-out parameters (not considered as let) but everything under self is not mutating.. So now I use an ugly int parameter to determine which menu item needs to be adjusted
-                                Button(player.name, action: {() in self.selectPlayer(number: 1, player: player)})
+                    HStack {
+                        Menu(playerMenus[0]) {
+                            ForEach(players, id: \.id) { player in
+                                if(player.isSelected != true) {
+                                    Button(player.name, action: {() in self.selectPlayer(number: 0, player: player)})
+                                }
                             }
                         }
+                            .padding(.trailing, -30.0)
+                            .disabled(playerMenus[0] != "Select player one" ? true : false)
+                        
+                        Button(action: {toggleBonus(id: 0)}) {
+                            Image(systemName: "arrow.up.heart")
+                                .foregroundColor(bonus[0] ? Color.red : Color.blue)
+                        }
+                            .padding(.leading, 30.0)
+                            .offset(x: 0, y: playerMenus[0] == "Select player one" || playerMenus[0] == "" ? -5000 : 0)
                     }
-                    .disabled(firstPlayer != "Select a player" ? true : false)
                     
-                    Menu(secondPlayer) {
-                        ForEach(players, id: \.id) { player in
-                            if(player.isSelected != true) {
-                                Button(player.name, action: {() in self.selectPlayer(number: 2, player: player)})
+                    HStack {
+                        Menu(playerMenus[1]) {
+                            ForEach(players, id: \.id) { player in
+                                if(player.isSelected != true) {
+                                    Button(player.name, action: {() in self.selectPlayer(number: 1, player: player)})
+                                }
                             }
                         }
+                        .padding(.trailing, -30.0)
+                        .disabled(playerMenus[1] != "Select player two" ? true : false)
+                        
+                        Button(action: {toggleBonus(id: 1)}) {
+                            Image(systemName: "arrow.up.heart")
+                                .foregroundColor(bonus[1] ? Color.red : Color.blue)
+                        }
+                        .padding(.leading, 30.0)
+                            .offset(x: 0, y: playerMenus[1] == "Select player two" || playerMenus[1] == "" ? -5000 : 0)
                     }
-                    .disabled(secondPlayer != "Select a player" ? true : false)
                     
-                    Menu(thirdPlayer) {
-                        ForEach(players, id: \.id) { player in
-                            if(player.isSelected != true) {
-                                Button(player.name, action: {() in self.selectPlayer(number: 3, player: player)})
+                    HStack {
+                        Menu(playerMenus[2]) {
+                            ForEach(players, id: \.id) { player in
+                                if(player.isSelected != true) {
+                                    Button(player.name, action: {() in self.selectPlayer(number: 2, player: player)})
+                                }
                             }
                         }
+                        .padding(.trailing, -30.0)
+                        .disabled(playerMenus[2] != "Select player three" ? true : false)
+                        
+                        Button(action: {toggleBonus(id: 2)}) {
+                            Image(systemName: "arrow.up.heart")
+                                .foregroundColor(bonus[2] ? Color.red : Color.blue)
+                        }
+                        .padding(.leading, 30.0)
+                            .offset(x: 0, y: playerMenus[2] == "Select player three" || playerMenus[2] == "" ? -5000 : 0)
                     }
-                    .disabled(thirdPlayer != "Select a player" ? true : false)
                     
-                    Menu(fourthPlayer) {
-                        ForEach(players, id: \.id) { player in
-                            if(player.isSelected != true) {
-                                Button(player.name, action: {() in self.selectPlayer(number: 4, player: player)})
+                    HStack {
+                        Menu(playerMenus[3]) {
+                            ForEach(players, id: \.id) { player in
+                                if(player.isSelected != true) {
+                                    Button(player.name, action: {() in self.selectPlayer(number: 3, player: player)})
+                                }
                             }
                         }
+                        .padding(.trailing, -30.0)
+                        .disabled(playerMenus[3] != "Select player four" ? true : false)
+                        
+                        Button(action: {toggleBonus(id: 3)}) {
+                            Image(systemName: "arrow.up.heart")
+                                .foregroundColor(bonus[3] ? Color.red : Color.blue)
+                        }
+                        .padding(.leading, 30.0)
+                            .offset(x: 0, y: playerMenus[3] == "Select player four" || playerMenus[3] == "" ? -5000 : 0)
                     }
-                    .disabled(fourthPlayer != "Select a player" ? true : false)
+                    
+                    HStack {
+                        Menu(playerMenus[4]) {
+                            ForEach(players, id: \.id) { player in
+                                if(player.isSelected != true) {
+                                    Button(player.name, action: {() in self.selectPlayer(number: 4, player: player)})
+                                }
+                            }
+                        }
+                        .padding(.trailing, -30.0)
+                        .disabled(playerMenus[4] != "Select player five" ? true : false)
+                        
+                        Button(action: {toggleBonus(id: 4)}) {
+                            Image(systemName: "arrow.up.heart")
+                                .foregroundColor(bonus[4] ? Color.red : Color.blue)
+                        }
+                        .padding(.leading, 30.0)
+                            .offset(x: 0, y: playerMenus[4] == "Select player five" || playerMenus[4] == "" ? -5000 : 0)
+                    }
+                    
+                    HStack {
+                        Menu(playerMenus[5]) {
+                            ForEach(players, id: \.id) { player in
+                                if(player.isSelected != true) {
+                                    Button(player.name, action: {() in self.selectPlayer(number: 5, player: player)})
+                                }
+                            }
+                        }
+                        .padding(.trailing, -30.0)
+                        .disabled(playerMenus[5] != "Select player six" ? true : false)
+                        
+                        Button(action: {toggleBonus(id: 6)}) {
+                            Image(systemName: "arrow.up.heart")
+                                .foregroundColor(bonus[6] ? Color.red : Color.blue)
+                        }
+                        .padding(.leading, 30.0)
+                            .offset(x: 0, y: playerMenus[5] == "Select player six" || playerMenus[5] == "" ? -5000 : 0)
+                    }
                 }
                 .padding(1)
                 Spacer()
                 
-                
+                Group {
+                    /*
+                    Button("Reload") {
+                        reloadWheelNames()
+                    }
+                     */
+                    NavigationLink("play") {
+                        WheelView(names: selectedNames)
+                    }
+                    .disabled(playerMenus[1] == "Select a player" || playerMenus[1] == "" ? true : false)
+                    .foregroundColor(playerMenus[1] == "Select a player" || playerMenus[1] == "" ? .gray : .white)
+                    Button("clear players") {
+                        clearPlayers()
+                    }
+                }
+                .padding(1)
+                .frame(width: 200.0, height: 30.0)
+                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
+                .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
+                .cornerRadius(/*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
+                .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
             }
         }
     }
@@ -111,42 +199,53 @@ struct ViewA: View {
     }
     
     private func selectPlayer(number : Int, player : Player) {
-        //Couldn't get mutating parameters to work so I'll have to use an ugly switch statement here
+        var newString : String = ""
         switch(number) {
+        case 0:
+            newString = "Select player two"
+            break;
         case 1:
-            firstPlayer = player.name
-            secondPlayer = "Select a player"
+            newString = "Select player three"
             break;
         case 2:
-            secondPlayer = player.name
-            thirdPlayer = "Select a player"
+            newString = "Select player four"
             break;
         case 3:
-            thirdPlayer = player.name
-            fourthPlayer = "Select a player"
+            newString = "Select player five"
             break;
         case 4:
-            fourthPlayer = player.name
+            newString = "Select player six"
             break;
         default:
             break;
+        }
+        
+        playerMenus[number] = player.name
+        if (newString != "") {
+            playerMenus[number + 1] = newString
         }
         
         //Directly editing a player is not possible because it's a constant. Find the player in the array first
         players[player.id].isSelected = true
         //player.isSelected = true
         
-        //Refresh the previesNames array
-        //reloadWheel()
-        reloadPreviewNames()
+        reloadWheelNames()
     }
                        
     private func clearPlayers() {
-        firstPlayer = "Select a player"
-        secondPlayer = ""
-        thirdPlayer = ""
-        fourthPlayer = ""
-        clearPreviewNames()
+        bonus = [false, false, false, false, false, false, false]
+        playerMenus = ["Select player one", "", "", "", "", ""]
+        clearWheelNames()
+    }
+    
+    private func toggleBonus(id : Int)  {
+        for player in players {
+            if (player.name == playerMenus[id]) {
+                players[player.id].bonus = !players[player.id].bonus
+                bonus[id] = !bonus[id]
+            }
+        }
+        reloadWheelNames()
     }
 }
 
