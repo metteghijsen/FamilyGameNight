@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22832EE82934AD4C00CA462A /* FortuneWheel in Frameworks */ = {isa = PBXBuildFile; productRef = 22832EE72934AD4C00CA462A /* FortuneWheel */; };
+		22832EEA2934AEB300CA462A /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22832EE92934AEB300CA462A /* Player.swift */; };
 		594D93162927A8B60016D07D /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D93152927A8B60016D07D /* ModelData.swift */; };
 		594D931C2927ABDF0016D07D /* LibraryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D931B2927ABDF0016D07D /* LibraryItem.swift */; };
 		594D931E2927AC190016D07D /* LibraryItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D931D2927AC190016D07D /* LibraryItemRow.swift */; };
@@ -25,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22832EE92934AEB300CA462A /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		594D93152927A8B60016D07D /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		594D931B2927ABDF0016D07D /* LibraryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryItem.swift; sourceTree = "<group>"; };
 		594D931D2927AC190016D07D /* LibraryItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryItemRow.swift; sourceTree = "<group>"; };
@@ -48,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22832EE82934AD4C00CA462A /* FortuneWheel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +71,7 @@
 			children = (
 				594D931B2927ABDF0016D07D /* LibraryItem.swift */,
 				594D93152927A8B60016D07D /* ModelData.swift */,
+				22832EE92934AEB300CA462A /* Player.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -140,6 +145,9 @@
 			dependencies = (
 			);
 			name = FamilyGameNight;
+			packageProductDependencies = (
+				22832EE72934AD4C00CA462A /* FortuneWheel */,
+			);
 			productName = FamilyGameNight;
 			productReference = 59D3A35D292638D20091E465 /* FamilyGameNight.app */;
 			productType = "com.apple.product-type.application";
@@ -168,6 +176,9 @@
 				Base,
 			);
 			mainGroup = 59D3A354292638D20091E465;
+			packageReferences = (
+				22832EE62934AD4C00CA462A /* XCRemoteSwiftPackageReference "FortuneWheel" */,
+			);
 			productRefGroup = 59D3A35E292638D20091E465 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -200,6 +211,7 @@
 				59D3A363292638D20091E465 /* ContentView.swift in Sources */,
 				59D3A370292639850091E465 /* Home.swift in Sources */,
 				594D931E2927AC190016D07D /* LibraryItemRow.swift in Sources */,
+				22832EEA2934AEB300CA462A /* Player.swift in Sources */,
 				59D4F73F292B86E8007CAC7F /* LibraryItemList.swift in Sources */,
 				59D3A374292639A20091E465 /* Library.swift in Sources */,
 				59D3A361292638D20091E465 /* FamilyGameNightApp.swift in Sources */,
@@ -409,6 +421,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		22832EE62934AD4C00CA462A /* XCRemoteSwiftPackageReference "FortuneWheel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sameersyd/FortuneWheel.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		22832EE72934AD4C00CA462A /* FortuneWheel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22832EE62934AD4C00CA462A /* XCRemoteSwiftPackageReference "FortuneWheel" */;
+			productName = FortuneWheel;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 59D3A355292638D20091E465 /* Project object */;
 }
