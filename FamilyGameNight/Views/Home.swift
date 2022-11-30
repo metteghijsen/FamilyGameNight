@@ -42,7 +42,7 @@ struct ViewA: View {
                 
                 FortuneWheel(model: model)
                     .disabled(true)
-                    .padding(50)
+                    .padding(20)
                 
                 //Spacer()
                 
@@ -162,7 +162,7 @@ struct ViewA: View {
                     }
                 }
                 .padding(1)
-                Spacer()
+                //Spacer()
                 
                 Group {
                     /*
@@ -179,7 +179,6 @@ struct ViewA: View {
                         clearPlayers()
                     }
                 }
-                .padding(1)
                 .frame(width: 200.0, height: 30.0)
                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                 .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
