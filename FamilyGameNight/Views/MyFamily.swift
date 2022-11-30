@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ViewB: View {
-    private var data: [Int] = Array(1...4)
-    private let colors: [Color] = [.red, .green, .blue, .yellow]
+    private var data: [Int] = Array(1...familyMembers.count)
+    private let colors: [Color] = [.red, .green, .blue, .yellow, .orange, .brown, .cyan, .indigo, .pink]
     
-    private let familyMembers: [String] = ["John", "Olivia", "Jesse", "Tom"]
+    //private let familyMembers: [String] = ["John", "Olivia", "Jesse", "Tom"]
     
     private let adaptiveColumns = [
         GridItem(.adaptive(minimum: 170))
