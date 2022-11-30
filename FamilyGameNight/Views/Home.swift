@@ -170,12 +170,12 @@ struct ViewA: View {
                         reloadWheelNames()
                     }
                      */
-                    NavigationLink("play") {
+                    NavigationLink("Play") {
                         WheelView(names: selectedNames)
                     }
                     .disabled(playerMenus[1] == "Select a player" || playerMenus[1] == "" ? true : false)
                     .foregroundColor(playerMenus[1] == "Select a player" || playerMenus[1] == "" ? .gray : .white)
-                    Button("clear players") {
+                    Button("Clear players") {
                         clearPlayers()
                     }
                 }

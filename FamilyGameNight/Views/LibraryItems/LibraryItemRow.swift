@@ -21,6 +21,11 @@ struct LibraryItemRow: View {
                 .bold()
                 .font(.title2)
             }
+            
+            if libraryItem.isFavorite {
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+            }
 
                 Spacer()
             
@@ -28,14 +33,12 @@ struct LibraryItemRow: View {
                 .font(.subheadline)
                 .bold()
                 .foregroundColor(.secondary)
-            
-          
                }
     }
 }
 
 struct LibraryItemRow_Previews: PreviewProvider {
     static var previews: some View {
-        LibraryItemRow(libraryItem: libraryItemArray[0])
+        LibraryItemRow(libraryItem: ModelData().libraryItemArray[0])
     }
 }

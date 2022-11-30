@@ -6,8 +6,12 @@
 //
 
 import Foundation
+import Combine
 
-var libraryItemArray: [LibraryItem] = load("boardgameData.json")
+final class ModelData: ObservableObject {
+    @Published var libraryItemArray: [LibraryItem] = load("boardgameData.json")
+}
+
 var players: [Player] = load("Profiles.json")
 var previewNames: [String] = ["", "", "", "", "", "", "", "", ""]
 var selectedNames: [String] = []

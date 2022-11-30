@@ -18,6 +18,7 @@
 		594D93202927B9370016D07D /* boardgameData.json in Resources */ = {isa = PBXBuildFile; fileRef = 594D931F2927B9370016D07D /* boardgameData.json */; };
 		596902BD292BD20000066351 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596902BC292BD20000066351 /* CircleImage.swift */; };
 		596902BF292BD2C500066351 /* LibraryItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596902BE292BD2C500066351 /* LibraryItemDetails.swift */; };
+		599AB41729375B4400FF6C77 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599AB41629375B4400FF6C77 /* FavoriteButton.swift */; };
 		59CA720E292C1B7E00F96704 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CA720D292C1B7E00F96704 /* BannerView.swift */; };
 		59D3A361292638D20091E465 /* FamilyGameNightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D3A360292638D20091E465 /* FamilyGameNightApp.swift */; };
 		59D3A363292638D20091E465 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D3A362292638D20091E465 /* ContentView.swift */; };
@@ -40,6 +41,7 @@
 		594D931F2927B9370016D07D /* boardgameData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = boardgameData.json; sourceTree = "<group>"; };
 		596902BC292BD20000066351 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		596902BE292BD2C500066351 /* LibraryItemDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryItemDetails.swift; sourceTree = "<group>"; };
+		599AB41629375B4400FF6C77 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		59CA720D292C1B7E00F96704 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		59D3A35D292638D20091E465 /* FamilyGameNight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyGameNight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59D3A360292638D20091E465 /* FamilyGameNightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyGameNightApp.swift; sourceTree = "<group>"; };
@@ -81,6 +83,35 @@
 				22832EE92934AEB300CA462A /* Player.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		599AB41429375A0F00FF6C77 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				596902BC292BD20000066351 /* CircleImage.swift */,
+				59CA720D292C1B7E00F96704 /* BannerView.swift */,
+				599AB41629375B4400FF6C77 /* FavoriteButton.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		599AB41529375A3800FF6C77 /* LibraryItems */ = {
+			isa = PBXGroup;
+			children = (
+				594D931D2927AC190016D07D /* LibraryItemRow.swift */,
+				596902BE292BD2C500066351 /* LibraryItemDetails.swift */,
+				59D4F73E292B86E8007CAC7F /* LibraryItemList.swift */,
+			);
+			path = LibraryItems;
+			sourceTree = "<group>";
+		};
+		599AB41829375BDA00FF6C77 /* FortuneWheel */ = {
+			isa = PBXGroup;
+			children = (
+				22832EF02934C2D000CA462A /* WheelView.swift */,
+				22832EF22934CDC600CA462A /* WheelAlert.swift */,
+			);
+			name = FortuneWheel;
 			sourceTree = "<group>";
 		};
 		59D3A354292638D20091E465 = {
@@ -127,13 +158,9 @@
 				59D3A36F292639850091E465 /* Home.swift */,
 				59D3A371292639960091E465 /* MyFamily.swift */,
 				59D3A373292639A20091E465 /* Library.swift */,
-				594D931D2927AC190016D07D /* LibraryItemRow.swift */,
-				59D4F73E292B86E8007CAC7F /* LibraryItemList.swift */,
-				596902BC292BD20000066351 /* CircleImage.swift */,
-				596902BE292BD2C500066351 /* LibraryItemDetails.swift */,
-				59CA720D292C1B7E00F96704 /* BannerView.swift */,
-				22832EF02934C2D000CA462A /* WheelView.swift */,
-				22832EF22934CDC600CA462A /* WheelAlert.swift */,
+				599AB41529375A3800FF6C77 /* LibraryItems */,
+				599AB41429375A0F00FF6C77 /* Helpers */,
+				599AB41829375BDA00FF6C77 /* FortuneWheel */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +254,7 @@
 				59D4F73F292B86E8007CAC7F /* LibraryItemList.swift in Sources */,
 				59D3A374292639A20091E465 /* Library.swift in Sources */,
 				59D3A361292638D20091E465 /* FamilyGameNightApp.swift in Sources */,
+				599AB41729375B4400FF6C77 /* FavoriteButton.swift in Sources */,
 				59CA720E292C1B7E00F96704 /* BannerView.swift in Sources */,
 				59D3A372292639960091E465 /* MyFamily.swift in Sources */,
 				594D93162927A8B60016D07D /* ModelData.swift in Sources */,

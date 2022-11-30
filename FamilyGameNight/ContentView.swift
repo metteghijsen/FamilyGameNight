@@ -12,8 +12,8 @@ struct ContentView: View {
         TabView {
             ViewA()
                 .tabItem() {
-                    Image(systemName: "house.fill")
-                    Text("Home")
+                    Image(systemName: "safari.fill")
+                    Text("Wheel of Fortune")
                 }
             ViewC()
                 .tabItem() {
@@ -32,5 +32,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ModelData())
     }
 }

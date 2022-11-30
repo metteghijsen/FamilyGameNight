@@ -8,20 +8,33 @@
 import SwiftUI
 
 struct LibraryItemList: View {
+    @EnvironmentObject var modelData: ModelData
+    @State private var showFavoritesOnly = false
+    
+    var filteredLibraryItemArray: [LibraryItem] {
+        modelData.libraryItemArray.filter { libraryItem in
+            (!showFavoritesOnly || libraryItem.isFavorite)
+        }
+    }
+    
     var body: some View {
-        let boardgameArray = libraryItemArray.filter {
+        let boardgameArray = filteredLibraryItemArray.filter {
             LibraryItem in return LibraryItem.category == "boardgame"
         }
         
-        let switchgameArray = libraryItemArray.filter {
+        let switchgameArray = filteredLibraryItemArray.filter {
             LibraryItem in return LibraryItem.category == "switchgame"
         }
         
-        let cardgameArray = libraryItemArray.filter {
+        let cardgameArray = filteredLibraryItemArray.filter {
             LibraryItem in return LibraryItem.category == "cardgame"
         }
         
         List {
+            Toggle(isOn: $showFavoritesOnly) {
+                              Text("Show favorites only")
+                          }
+            
             Section(header: Text("Board games"))
             {
                 ForEach(boardgameArray, id: \.self){
@@ -64,5 +77,6 @@ struct LibraryItemList: View {
 struct LibraryItemList_Previews: PreviewProvider {
     static var previews: some View {
         LibraryItemList()
+            .environmentObject(ModelData())
     }
 }

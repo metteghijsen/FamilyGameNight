@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct LibraryItemDetails: View {
+    @EnvironmentObject var modelData: ModelData
     var libraryItem: LibraryItem
+    
+    var libraryItemIndex: Int {
+        modelData.libraryItemArray.firstIndex(where:{ $0.id == libraryItem.id})!
+    }
     
     var body: some View {
             ScrollView {
@@ -28,7 +33,8 @@ struct LibraryItemDetails: View {
                         Text(libraryItem.name)
                             .font(.title)
                             .bold()
-                        
+                    
+                        FavoriteButton(isSet: $modelData.libraryItemArray[libraryItemIndex].isFavorite)
                         Spacer()
                         
                         Text(libraryItem.price)
@@ -78,7 +84,10 @@ struct LibraryItemDetails: View {
 }
 
 struct LibraryItemDetails_Previews: PreviewProvider {
+    static let modelData = ModelData()
+    
     static var previews: some View {
-        LibraryItemDetails(libraryItem: libraryItemArray[0])
+        LibraryItemDetails(libraryItem: ModelData().libraryItemArray[0])
+            .environmentObject(modelData)
     }
 }

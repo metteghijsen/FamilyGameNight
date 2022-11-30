@@ -23,6 +23,7 @@ struct LibraryItem: Hashable, Codable, Identifiable {
       
     var description: String
     var category: String
+    var isFavorite: Bool
     
     private var imageName: String
     var thumbnailImage: Image {
