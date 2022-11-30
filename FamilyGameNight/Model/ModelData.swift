@@ -47,6 +47,19 @@ func reloadFamilyMembers() -> [String] {
     return names
 }
 
+/*
+func addFamilyMember(name: String)  {
+    var id = 0;
+    for player in players {
+        if(player.id > id) {
+            id = player.id
+        }
+    }
+    let member : Player = Player(id: id, name: name)
+    players.append(member)
+}
+ */
+
 func clearWheelNames() {
     //Set all objects to not selected
     for player in players {

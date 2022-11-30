@@ -44,6 +44,21 @@ struct ViewB: View {
                             }
                         }
                     }
+                    ZStack{
+                        Rectangle()
+                            .frame(width: 170, height: 170)
+                            .foregroundColor(Color.white)
+                            .cornerRadius(30)
+                        VStack{
+                            Image(systemName: "person.crop.circle.fill")
+                                .foregroundColor(Color.white)
+                                .font(.system(size: 80))
+                            Text("Add member")
+                                .foregroundColor(Color.white)
+                                .font(.system(size:20, weight: .bold, design:
+                                        .rounded))
+                        }
+                    }
                 }
             }
             .navigationTitle("My Family")

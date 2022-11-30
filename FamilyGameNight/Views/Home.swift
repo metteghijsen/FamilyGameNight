@@ -14,21 +14,6 @@ struct ViewA: View {
     @State var bonus = [false, false, false, false, false, false, false]
     
     var body: some View {
-        /*
-        NavigationView{
-            ScrollView{
-                ZStack {
-                    Color.blue
-                
-                    Image(systemName: "house.fill")
-                    .foregroundColor(Color.white)
-                    .font(.system(size: 100))
-                }
-            }
-            .navigationTitle("Home")
-        }
-         */
-        
         NavigationView{
             let model = FortuneWheelModel(
                 titles: previewNames, size: 320,
@@ -39,6 +24,7 @@ struct ViewA: View {
                 Text("Wheel settings")
                     .font(.title)
                     .fontWeight(.bold)
+                    .foregroundColor(Color.accentColor)
                 
                 FortuneWheel(model: model)
                     .disabled(true)
@@ -111,44 +97,44 @@ struct ViewA: View {
                         }
                         VStack {
                             Button(action: {toggleBonus(id: 0)}) {
-                                Image(systemName: "plus.app.fill")
-                                    .foregroundColor(bonus[0] ? Color.red : Color.blue)
+                                Image(systemName: bonus[0] ? "minus.square.fill" : "plus.app.fill")
+                                    .foregroundColor(Color.accentColor)
                             }
                             .frame(height: 17.0)
                             .frame(height: 20.0)
                             .offset(x: 0, y: playerMenus[0] == "Select player one" || playerMenus[0] == "" ? -5000 : 0)
                             
                             Button(action: {toggleBonus(id: 1)}) {
-                                Image(systemName: "plus.app.fill")
-                                    .foregroundColor(bonus[1] ? Color.red : Color.blue)
+                                Image(systemName: bonus[1] ? "minus.square.fill" : "plus.app.fill")
+                                    .foregroundColor(Color.accentColor)
                             }
                             .frame(height: 17.0)
                             .offset(x: 0, y: playerMenus[1] == "Select player two" || playerMenus[1] == "" ? -5000 : 0)
                             
                             Button(action: {toggleBonus(id: 2)}) {
-                                Image(systemName: "plus.app.fill")
-                                    .foregroundColor(bonus[2] ? Color.red : Color.blue)
+                                Image(systemName: bonus[2] ? "minus.square.fill" : "plus.app.fill")
+                                    .foregroundColor(Color.accentColor)
                             }
                             .frame(height: 17.0)
                             .offset(x: 0, y: playerMenus[2] == "Select player three" || playerMenus[2] == "" ? -5000 : 0)
                             
                             Button(action: {toggleBonus(id: 3)}) {
-                                Image(systemName: "plus.app.fill")
-                                    .foregroundColor(bonus[3] ? Color.red : Color.blue)
+                                Image(systemName: bonus[3] ? "minus.square.fill" : "plus.app.fill")
+                                    .foregroundColor(Color.accentColor)
                             }
                             .frame(height: 17.0)
                             .offset(x: 0, y: playerMenus[3] == "Select player four" || playerMenus[3] == "" ? -5000 : 0)
                             
                             Button(action: {toggleBonus(id: 4)}) {
-                                Image(systemName: "arrow.up.heart.fill")
-                                    .foregroundColor(bonus[4] ? Color.red : Color.blue)
+                                Image(systemName: bonus[4] ? "minus.square.fill" : "plus.app.fill")
+                                    .foregroundColor(Color.accentColor)
                             }
                             .frame(height: 17.0)
                             .offset(x: 0, y: playerMenus[4] == "Select player five" || playerMenus[4] == "" ? -5000 : 0)
                             
                             Button(action: {toggleBonus(id: 5)}) {
-                                Image(systemName: "plus.app.fill")
-                                    .foregroundColor(bonus[6] ? Color.red : Color.blue)
+                                Image(systemName: bonus[5] ? "minus.square.fill" : "plus.app.fill")
+                                    .foregroundColor(Color.accentColor)
                             }
                             .frame(height: 17.0)
                             .offset(x: 0, y: playerMenus[5] == "Select player six" || playerMenus[5] == "" ? -5000 : 0)
@@ -291,8 +277,7 @@ struct ViewA: View {
                     }
                 }
                 .frame(width: 200.0, height: 30.0)
-                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
-                .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
+                .background(Color.accentColor)
                 .cornerRadius(/*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
                 .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
             }

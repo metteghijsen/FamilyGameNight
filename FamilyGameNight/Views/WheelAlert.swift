@@ -15,9 +15,9 @@ struct WheelAlert: View {
             .fontWeight(.bold)
             .multilineTextAlignment(.center)
             .frame(width: 300.0, height: 50.0)
-            .background(.black)
+            .background(Color.accentColor)
             .foregroundColor(.white)
-            .cornerRadius(50)
+            .cornerRadius(100)
     }
 }
 
