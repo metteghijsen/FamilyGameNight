@@ -33,7 +33,8 @@ struct LibraryItemList: View {
         List {
             Toggle(isOn: $showFavoritesOnly) {
                               Text("Show favorites only")
-                          }
+            }
+            .tint(.accentColor)
             
             Section(header: Text("Board games"))
             {
