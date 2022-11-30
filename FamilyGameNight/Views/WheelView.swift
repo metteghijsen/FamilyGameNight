@@ -28,9 +28,11 @@ struct WheelView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 75.0, height: 75.0)
+                .foregroundColor(Color.accentColor)
             Text("Swipe to spin!")
                 .font(.headline)
                 .fontWeight(.bold)
+                .foregroundColor(Color.accentColor)
             Spacer()
         }
     }
