@@ -20,8 +20,18 @@ struct WheelView: View {
                 FortuneWheel(model: model)
                     .disabled(disableWheel ? true : false)
                 WheelAlert(name: winner)
-                    .offset(x: 0, y: hideAlert ? -6000 : -250)
+                    .offset(x: 0, y: hideAlert ? -6000 : 0)
             }
+            .padding(100)
+            
+            Image(systemName: "hand.draw.fill")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 75.0, height: 75.0)
+            Text("Swipe to spin!")
+                .font(.headline)
+                .fontWeight(.bold)
+            Spacer()
         }
     }
     
