@@ -59,7 +59,7 @@ struct ViewA: View {
                             .disabled(playerMenus[0] != "Select player one" ? true : false)
                         
                         Button(action: {toggleBonus(id: 0)}) {
-                            Image(systemName: "arrow.up.heart")
+                            Image(systemName: "plus.app.fill")
                                 .foregroundColor(bonus[0] ? Color.red : Color.blue)
                         }
                             .padding(.leading, 30.0)
@@ -78,7 +78,7 @@ struct ViewA: View {
                         .disabled(playerMenus[1] != "Select player two" ? true : false)
                         
                         Button(action: {toggleBonus(id: 1)}) {
-                            Image(systemName: "arrow.up.heart")
+                            Image(systemName: "plus.app.fill")
                                 .foregroundColor(bonus[1] ? Color.red : Color.blue)
                         }
                         .padding(.leading, 30.0)
@@ -97,7 +97,7 @@ struct ViewA: View {
                         .disabled(playerMenus[2] != "Select player three" ? true : false)
                         
                         Button(action: {toggleBonus(id: 2)}) {
-                            Image(systemName: "arrow.up.heart")
+                            Image(systemName: "plus.app.fill")
                                 .foregroundColor(bonus[2] ? Color.red : Color.blue)
                         }
                         .padding(.leading, 30.0)
@@ -116,7 +116,7 @@ struct ViewA: View {
                         .disabled(playerMenus[3] != "Select player four" ? true : false)
                         
                         Button(action: {toggleBonus(id: 3)}) {
-                            Image(systemName: "arrow.up.heart")
+                            Image(systemName: "plus.app.fill")
                                 .foregroundColor(bonus[3] ? Color.red : Color.blue)
                         }
                         .padding(.leading, 30.0)
@@ -135,7 +135,7 @@ struct ViewA: View {
                         .disabled(playerMenus[4] != "Select player five" ? true : false)
                         
                         Button(action: {toggleBonus(id: 4)}) {
-                            Image(systemName: "arrow.up.heart")
+                            Image(systemName: "arrow.up.heart.fill")
                                 .foregroundColor(bonus[4] ? Color.red : Color.blue)
                         }
                         .padding(.leading, 30.0)
@@ -154,7 +154,7 @@ struct ViewA: View {
                         .disabled(playerMenus[5] != "Select player six" ? true : false)
                         
                         Button(action: {toggleBonus(id: 6)}) {
-                            Image(systemName: "arrow.up.heart")
+                            Image(systemName: "plus.app.fill")
                                 .foregroundColor(bonus[6] ? Color.red : Color.blue)
                         }
                         .padding(.leading, 30.0)

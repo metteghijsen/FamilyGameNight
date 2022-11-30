@@ -1,25 +1,25 @@
 [
     {
         "id": 0,
-        "name": "Sam",
+        "name": "John",
         "bonus": false,
         "isSelected" : false
     },
     {
         "id": 1,
-        "name": "Mette",
+        "name": "Olivia",
         "bonus": false,
         "isSelected" : false
     },
     {
         "id": 2,
-        "name": "Henk",
+        "name": "Tom",
         "bonus": false,
         "isSelected" : false
     },
     {
         "id": 3,
-        "name": "Frenk",
+        "name": "Jesse",
         "bonus": false,
         "isSelected" : false
     }
