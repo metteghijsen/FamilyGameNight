@@ -30,8 +30,6 @@ struct ViewA: View {
                     .disabled(true)
                     .padding(20)
                 
-                //Spacer()
-                
                 Group {
                     HStack {
                         VStack {
@@ -141,132 +139,10 @@ struct ViewA: View {
                         }
                     }
                     .padding(.trailing, -25.0)
-                    
-                    /*
-                    HStack {
-                        Menu(playerMenus[0]) {
-                            ForEach(players, id: \.id) { player in
-                                if(player.isSelected != true) {
-                                    Button(player.name, action: {() in self.selectPlayer(number: 0, player: player)})
-                                }
-                            }
-                        }
-                            .padding(.trailing, -30.0)
-                            .disabled(playerMenus[0] != "Select player one" ? true : false)
-                        
-                        Button(action: {toggleBonus(id: 0)}) {
-                            Image(systemName: "plus.app.fill")
-                                .foregroundColor(bonus[0] ? Color.red : Color.blue)
-                        }
-                            .padding(.leading, 30.0)
-                            .offset(x: 0, y: playerMenus[0] == "Select player one" || playerMenus[0] == "" ? -5000 : 0)
-                    }
-                    
-                    HStack {
-                        Menu(playerMenus[1]) {
-                            ForEach(players, id: \.id) { player in
-                                if(player.isSelected != true) {
-                                    Button(player.name, action: {() in self.selectPlayer(number: 1, player: player)})
-                                }
-                            }
-                        }
-                        .padding(.trailing, -30.0)
-                        .disabled(playerMenus[1] != "Select player two" ? true : false)
-                        
-                        Button(action: {toggleBonus(id: 1)}) {
-                            Image(systemName: "plus.app.fill")
-                                .foregroundColor(bonus[1] ? Color.red : Color.blue)
-                        }
-                        .padding(.leading, 30.0)
-                            .offset(x: 0, y: playerMenus[1] == "Select player two" || playerMenus[1] == "" ? -5000 : 0)
-                    }
-                    
-                    HStack {
-                        Menu(playerMenus[2]) {
-                            ForEach(players, id: \.id) { player in
-                                if(player.isSelected != true) {
-                                    Button(player.name, action: {() in self.selectPlayer(number: 2, player: player)})
-                                }
-                            }
-                        }
-                        .padding(.trailing, -30.0)
-                        .disabled(playerMenus[2] != "Select player three" ? true : false)
-                        
-                        Button(action: {toggleBonus(id: 2)}) {
-                            Image(systemName: "plus.app.fill")
-                                .foregroundColor(bonus[2] ? Color.red : Color.blue)
-                        }
-                        .padding(.leading, 30.0)
-                            .offset(x: 0, y: playerMenus[2] == "Select player three" || playerMenus[2] == "" ? -5000 : 0)
-                    }
-                    
-                    HStack {
-                        Menu(playerMenus[3]) {
-                            ForEach(players, id: \.id) { player in
-                                if(player.isSelected != true) {
-                                    Button(player.name, action: {() in self.selectPlayer(number: 3, player: player)})
-                                }
-                            }
-                        }
-                        .padding(.trailing, -30.0)
-                        .disabled(playerMenus[3] != "Select player four" ? true : false)
-                        
-                        Button(action: {toggleBonus(id: 3)}) {
-                            Image(systemName: "plus.app.fill")
-                                .foregroundColor(bonus[3] ? Color.red : Color.blue)
-                        }
-                        .padding(.leading, 30.0)
-                            .offset(x: 0, y: playerMenus[3] == "Select player four" || playerMenus[3] == "" ? -5000 : 0)
-                    }
-                    
-                    HStack {
-                        Menu(playerMenus[4]) {
-                            ForEach(players, id: \.id) { player in
-                                if(player.isSelected != true) {
-                                    Button(player.name, action: {() in self.selectPlayer(number: 4, player: player)})
-                                }
-                            }
-                        }
-                        .padding(.trailing, -30.0)
-                        .disabled(playerMenus[4] != "Select player five" ? true : false)
-                        
-                        Button(action: {toggleBonus(id: 4)}) {
-                            Image(systemName: "arrow.up.heart.fill")
-                                .foregroundColor(bonus[4] ? Color.red : Color.blue)
-                        }
-                        .padding(.leading, 30.0)
-                            .offset(x: 0, y: playerMenus[4] == "Select player five" || playerMenus[4] == "" ? -5000 : 0)
-                    }
-                    
-                    HStack {
-                        Menu(playerMenus[5]) {
-                            ForEach(players, id: \.id) { player in
-                                if(player.isSelected != true) {
-                                    Button(player.name, action: {() in self.selectPlayer(number: 5, player: player)})
-                                }
-                            }
-                        }
-                        .padding(.trailing, -30.0)
-                        .disabled(playerMenus[5] != "Select player six" ? true : false)
-                        
-                        Button(action: {toggleBonus(id: 5)}) {
-                            Image(systemName: "plus.app.fill")
-                                .foregroundColor(bonus[6] ? Color.red : Color.blue)
-                        }
-                        .padding(.leading, 30.0)
-                            .offset(x: 0, y: playerMenus[5] == "Select player six" || playerMenus[5] == "" ? -5000 : 0)
-                    }
-                     */
                 }
                 .padding(10)
-                //Spacer()
                 
                 Group {
-                    /*
-                    Button("Reload") {
-                        reloadWheelNames()
-                    }
-                     */
                     NavigationLink("Play") {
                         WheelView(names: selectedNames)
                     }
@@ -319,11 +195,7 @@ struct ViewA: View {
         if (newString != "") {
             playerMenus[number + 1] = newString
         }
-        
-        //Directly editing a player is not possible because it's a constant. Find the player in the array first
         players[player.id].isSelected = true
-        //player.isSelected = true
-        
         reloadWheelNames()
     }
                        

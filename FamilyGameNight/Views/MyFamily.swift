@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ViewB: View {
+    @State var showWindow = false
+    @State private var memberName : String = ""
+    
     static var wheelRed = Color("wheelRed")
     static var wheelYellow = Color("wheelYellow")
     static var wheelGreen = Color("wheelGreen")
@@ -16,7 +19,8 @@ struct ViewB: View {
     static var wheelPurple = Color("wheelPurple")
     
     private var data: [Int] = Array(1...familyMembers.count)
-    private let colors: [Color] = [Color("wheelRed"), Color("wheelGreen"), Color("wheelBlue"), Color("wheelYellow"), Color("wheelOrange"), Color("wheelPurple")]
+//private let colors: [Color] = [Color("wheelRed"), Color("wheelGreen"), Color("wheelBlue"), Color("wheelYellow"), Color("wheelOrange"), Color("wheelPurple")]
+    private let colors: [Color] = [.red, .green, .blue, .yellow, ]
     
     
     private let adaptiveColumns = [
@@ -26,43 +30,80 @@ struct ViewB: View {
     var body: some View {
         NavigationView{
             ScrollView{
-                LazyVGrid(columns: adaptiveColumns, spacing: 20){
-                    ForEach(data, id: \.self){ number in
+                ZStack {
+                    LazyVGrid(columns: adaptiveColumns, spacing: 20){
+                        ForEach(players, id: \.id){ player in
+                            ZStack{
+                                Rectangle()
+                                    .frame(width: 170, height: 170)
+                                    .foregroundColor(colors[player.id%4])
+                                    .cornerRadius(30)
+                                VStack{
+                                    Image(systemName: "person.crop.circle.fill")
+                                        .foregroundColor(Color.white)
+                                        .font(.system(size: 80))
+                                    Text(player.name)
+                                    //Text("test")
+                                        .foregroundColor(Color.white)
+                                        .font(.system(size:20, weight: .bold, design:
+                                                .rounded))
+                                }
+                            }
+                        }
                         ZStack{
-                            Rectangle()
-                                .frame(width: 170, height: 170)
-                                .foregroundColor(colors[number%4])
-                                .cornerRadius(30)
+                            Capsule(style: .continuous)
+                                            .stroke(Color.gray, style: StrokeStyle(lineWidth: 5, dash: [10]))
+                                            .frame(width: 150, height: 150)
+
                             VStack{
-                                Image(systemName: "person.crop.circle.fill")
-                                    .foregroundColor(Color.white)
-                                    .font(.system(size: 80))
-                                Text(familyMembers[number%4])
-                                    .foregroundColor(Color.white)
-                                    .font(.system(size:20, weight: .bold, design:
-                                            .rounded))
+                                Button(action: {toggleWindow()}) {
+                                    Image(systemName: "plus")
+                                        .foregroundColor(Color.gray)
+                                        .font(.system(size: 100))
+                                }
                             }
                         }
                     }
-                    ZStack{
-                        Rectangle()
-                            .frame(width: 170, height: 170)
-                            .foregroundColor(Color.white)
-                            .cornerRadius(30)
-                        VStack{
-                            Image(systemName: "person.crop.circle.fill")
-                                .foregroundColor(Color.white)
-                                .font(.system(size: 80))
-                            Text("Add member")
-                                .foregroundColor(Color.white)
-                                .font(.system(size:20, weight: .bold, design:
-                                        .rounded))
+                    ZStack {
+                        VStack {
+                            TextField("Enter your name", text: $memberName)
+                                .padding(.top, 20.0)
+                                .onSubmit {
+                                    addFamilyMember(name: memberName)
+                                }
+                                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                                .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            HStack {
+                                Button("Cancel") {
+                                    toggleWindow()
+                                }
+                                .padding(20)
+                                Button("Add") {
+                                    addFamilyMember(name: memberName)
+                                    toggleWindow()
+                                }
+                                .padding(20)
+                            }
+                            .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
                         }
+                        .background(
+                                Capsule()
+                                    .strokeBorder(Color.black,lineWidth: 3)
+                                    .background(Color.white)
+                                    .clipped()
+                            )
+                            .clipShape(Capsule())
+                            .frame(width: 350, height: 200)
                     }
+                        .offset(x: 0, y: showWindow ? 0 : -6000)
                 }
             }
             .navigationTitle("My Family")
         }
+    }
+    
+    private func toggleWindow() {
+        showWindow = !showWindow
     }
 }
 

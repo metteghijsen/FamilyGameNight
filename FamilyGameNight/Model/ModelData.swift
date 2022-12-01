@@ -1,10 +1,3 @@
-//
-//  ModelData.swift
-//  FamilyGameNight
-//
-//  Created by Mette Ghijsen on 18/11/2022.
-//
-
 import Foundation
 import Combine
 
@@ -13,7 +6,7 @@ final class ModelData: ObservableObject {
 }
 
 var players: [Player] = load("Profiles.json")
-var previewNames: [String] = ["", "", "", "", "", "", "", "", ""]
+var previewNames: [String] = ["", "", "", "", "", "", "", "", "", ""]
 var selectedNames: [String] = []
 var familyMembers: [String] = reloadFamilyMembers()
 
@@ -47,18 +40,19 @@ func reloadFamilyMembers() -> [String] {
     return names
 }
 
-/*
 func addFamilyMember(name: String)  {
-    var id = 0;
-    for player in players {
-        if(player.id > id) {
-            id = player.id
+    if (name.count > 0) {
+        var id = 0;
+        for player in players {
+            if(player.id > id) {
+                id = player.id
+            }
         }
+        let member : Player = Player(id: id + 1, name: name)
+        players.append(member)
+        familyMembers = reloadFamilyMembers()
     }
-    let member : Player = Player(id: id, name: name)
-    players.append(member)
 }
- */
 
 func clearWheelNames() {
     //Set all objects to not selected

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		222722F5293782E9005C2B40 /* AddMemberWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222722F4293782E9005C2B40 /* AddMemberWindow.swift */; };
 		22832EEA2934AEB300CA462A /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22832EE92934AEB300CA462A /* Player.swift */; };
 		22832EED2934B9EA00CA462A /* FortuneWheel in Frameworks */ = {isa = PBXBuildFile; productRef = 22832EEC2934B9EA00CA462A /* FortuneWheel */; };
 		22832EEF2934C11E00CA462A /* Profiles.json in Resources */ = {isa = PBXBuildFile; fileRef = 22832EEE2934C11E00CA462A /* Profiles.json */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		222722F4293782E9005C2B40 /* AddMemberWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberWindow.swift; sourceTree = "<group>"; };
 		22832EE92934AEB300CA462A /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		22832EEE2934C11E00CA462A /* Profiles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Profiles.json; sourceTree = "<group>"; };
 		22832EF02934C2D000CA462A /* WheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				596902BC292BD20000066351 /* CircleImage.swift */,
 				59CA720D292C1B7E00F96704 /* BannerView.swift */,
 				599AB41629375B4400FF6C77 /* FavoriteButton.swift */,
+				222722F4293782E9005C2B40 /* AddMemberWindow.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				594D931E2927AC190016D07D /* LibraryItemRow.swift in Sources */,
 				22832EEA2934AEB300CA462A /* Player.swift in Sources */,
 				59D4F73F292B86E8007CAC7F /* LibraryItemList.swift in Sources */,
+				222722F5293782E9005C2B40 /* AddMemberWindow.swift in Sources */,
 				59D3A374292639A20091E465 /* Library.swift in Sources */,
 				59D3A361292638D20091E465 /* FamilyGameNightApp.swift in Sources */,
 				599AB41729375B4400FF6C77 /* FavoriteButton.swift in Sources */,
