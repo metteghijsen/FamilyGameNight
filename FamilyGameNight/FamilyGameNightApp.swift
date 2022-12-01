@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct FamilyGameNightApp: App {
+    @StateObject private var modelData = ModelData()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

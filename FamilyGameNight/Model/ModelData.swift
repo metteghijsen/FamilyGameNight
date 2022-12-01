@@ -1,14 +1,14 @@
 import Foundation
 import Combine
 
-final class ModelData: ObservableObject {
-    @Published var libraryItemArray: [LibraryItem] = load("boardgameData.json")
-}
-
 var players: [Player] = load("Profiles.json")
 var previewNames: [String] = ["", "", "", "", "", "", "", "", "", ""]
 var selectedNames: [String] = []
 var familyMembers: [String] = reloadFamilyMembers()
+
+final class ModelData: ObservableObject {
+    @Published var libraryItemArray: [LibraryItem] = load("boardgameData.json")
+}
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
