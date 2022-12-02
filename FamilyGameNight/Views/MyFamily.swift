@@ -11,16 +11,18 @@ struct ViewB: View {
     @State var showWindow = false
     @State private var memberName : String = ""
     
+    /*
     static var wheelRed = Color("wheelRed")
     static var wheelYellow = Color("wheelYellow")
     static var wheelGreen = Color("wheelGreen")
     static var wheelBlue = Color("wheelBlue")
     static var wheelOrange = Color("wheelOrange")
     static var wheelPurple = Color("wheelPurple")
+     */
     
     private var data: [Int] = Array(1...familyMembers.count)
-//private let colors: [Color] = [Color("wheelRed"), Color("wheelGreen"), Color("wheelBlue"), Color("wheelYellow"), Color("wheelOrange"), Color("wheelPurple")]
-    private let colors: [Color] = [.red, .green, .blue, .yellow, ]
+    private let colors: [Color] = [Color("WheelRed"), Color("WheelGreen"), Color("WheelBlue"), Color("WheelYellow"), Color("wheelOrange"), Color("wheelPurple")]
+    //private let colors: [Color] = [.red, .green, .blue, .yellow, ]
     
     
     private let adaptiveColumns = [
@@ -36,7 +38,7 @@ struct ViewB: View {
                             ZStack{
                                 Rectangle()
                                     .frame(width: 170, height: 170)
-                                    .foregroundColor(colors[player.id%4])
+                                    .foregroundColor(colors[player.id%colors.count])
                                     .cornerRadius(30)
                                 VStack{
                                     Image(systemName: "person.crop.circle.fill")
