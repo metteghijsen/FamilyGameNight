@@ -89,12 +89,14 @@ struct ViewB: View {
                             .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
                         }
                         .background(
-                                Capsule()
-                                    .strokeBorder(Color.black,lineWidth: 3)
+                                Rectangle()
+                                    .strokeBorder(Color.white,lineWidth: 3)
                                     .background(Color.white)
                                     .clipped()
+                                    .cornerRadius(30.0)
+                                
                             )
-                            .clipShape(Capsule())
+                            .clipShape(Rectangle())
                             .frame(width: 350, height: 200)
                     }
                         .offset(x: 0, y: showWindow ? 0 : -6000)
