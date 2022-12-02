@@ -93,8 +93,7 @@ struct ViewB: View {
                                     .strokeBorder(Color.white,lineWidth: 3)
                                     .background(Color.white)
                                     .clipped()
-                                    .cornerRadius(30.0)
-                                
+                                    .cornerRadius(30)
                             )
                             .clipShape(Rectangle())
                             .frame(width: 350, height: 200)
